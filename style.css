@@ -1,0 +1,177 @@
+
+@font-face {
+  font-family: Bebas;
+  src: url(fonts/BEBAS_.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(fonts/RobotoCondensed-Bold.ttf);
+}
+
+
+
+body {
+  
+   background:#DBDCDE;
+   background-image: url('images/WoodFine0008_L.jpg');
+   background-repeat: repeat;
+   
+}
+
+
+
+p {
+   font-family:Roboto;
+   font-size:12pt;
+}
+
+
+
+h1 h2 h3 h4 h5 h6 {
+   text-align:right;
+}
+
+h1 {
+  font-size:40pt;
+  color:#95B9E2;
+}
+
+h2 {
+   font-size:28pt;
+   color:#908670;
+}
+
+h3 {
+   font-size:20pt;
+   color:#C5DAE6;
+   
+}
+
+.header {
+   font-family:'RobotoCondensed';
+   margin-top: 40px;
+   font-size:30pt;
+   text-align:left;
+   color: #163854;
+}
+
+.deck {
+   font-family:'Roboto';
+   font-size:12pt;
+   text-align:left;
+   color: #163854;
+   background-color:#DCE9F4;
+   padding:20px;
+}
+
+.numbers {
+   font-family:Bebas;
+   font-size:50pt;
+   text-align:center;
+   color:#163854;
+   
+   
+}
+
+/*.numbers2 {
+   font-family:InterstateBlackCondensed;
+   font-size:60pt;
+   text-align:center;
+   color:#C5DAE6;
+   
+   
+}*/
+
+.deaths {
+   font-family:Roboto;
+   font-size:20pt;
+   text-align:center;
+   color:#908670;
+}
+
+.smalltext {
+   font-family:Roboto;
+   font-weight: 300;
+   font-size:11pt;
+   text-align:left;
+   padding-left:40px;
+   padding-right:20px;
+   padding-bottom:10px;
+   color:#908670;
+   
+}
+
+.cigarette {
+   margin-top:-30px;
+}
+
+.bluearrow {
+   
+}
+
+.box {
+   background-color: #F1F0E8;
+   border-style:solid;
+   border-color:#908670;
+   border-width:1px;
+}
+
+.arrow {
+   font-size:16pt;
+}
+
+.between {
+   color:#95B9E2;
+   font-family: Bebas; 
+   font-size:20pt;
+   
+}
+
+.fltr {
+   float:right;
+}
+
+.fltl {
+   float:left;
+}
+
+#chart1 {
+   background-color:#F1F0E8;
+}
+
+.maptitle {
+   font-family:InterstateRegularCompressed;
+   font-weight:400;
+   text-align:center;
+   color:#908670;
+   font-size:15pt;
+   margin-top:25px;
+}
+
+.table {
+   background-color:#F1F0E8;
+   width:100%;
+   font-family:InterstateRegularCompressed;
+   padding:10px;
+}
+
+.table th {
+   background-color:#FFFFFF;
+}
+
+.headWhite{
+   background-color: #C5DAE6;
+   font-weight: 400;
+   font-size:18px;
+   
+}
+
+
+
+

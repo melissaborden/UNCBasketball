@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>UNC Basketball</title>
+    
+    <!--Bootstrap Style Sheet and Javascript-->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+	
+	
+   <!--my personalized style sheet-->
+   <link href="style.css" rel="stylesheet">
+ 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  
+    <!--Bootstrap Javascript-->
+    <script src="js/bootstrap.js"></script>
+    
+    <!--Google Maps-->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map { height: 450px }
+    </style>
+    
+    <!--instagram-->
+     <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvHOErw2kL2mEkqD1IgXcceRBuoIJ-AfE&sensor=true">
+    </script>
+    <script type="text/javascript">
+     
+     var styles = [
+    {
+      stylers: [
+        { hue: "#163854" },
+        { saturation: -40 }
+      ]
+    },{
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+        { lightness: 100 },
+        { visibility: "simplified" }
+      ]
+    },{
+      featureType: "road",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    }
+  ];
+     
+     var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Styled Map"});
+     
+     
+     $(document).ready(function(){
+      console.log('ready');
+	   function initialize() {
+	   
+	       var mapOptions = {
+		 center: new google.maps.LatLng(35.9130556, -79.0561111),
+		 zoom: 4,
+		 mapTypeControlOptions: {
+		 mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+		 }
+		 
+	   };
+	     
+	      var google_map = new
+	      google.maps.Map(document.getElementById("map"),
+	       mapOptions);
+	     
+ 
+	     google_map.mapTypes.set('map_style', styledMap);
+		google_map.setMapTypeId('map_style');
+	   var info_window = new google.maps.InfoWindow({
+            content: 'loading'
+        });
+
+        var t = [];
+        var x = [];
+        var y = [];
+        var h = [];
+
+        t.push('San Fransico');
+        x.push(37.80209);
+        y.push(-122.27318);
+        h.push('<p><img src="images/warriors.png" width=30 height=30>&nbsp;<strong>Golden State Warriors</strong><br/>Harrison Barnes, 2010-2012</p>');
+
+        t.push('Dallas');
+        x.push(32.79044);
+        y.push(-96.81016);
+        h.push('<p><span><img src="images/mavericks.png" width=40 height=40>&nbsp;<strong>Dallas Mavericks</strong></span><br/>Vince Carter, 1995-1998<br/>Wayne Ellington, 2006-2009<br/>Brandan Wright, 2006-2007</p>');
+	
+	t.push('Location Name 2');
+        x.push(34.04313);
+        y.push(-118.26712);
+        h.push('<p><span><img src="images/clippers.png" width=40 height=40>&nbsp;<strong>Los Angeles Clippers</strong></span><br />Antawn Jamison, 1995-1998 <br />Reggie Bullock, 2010-2013</p>');
+	
+	t.push('Location Name 2');
+        x.push(35.22506);
+        y.push(-80.83933);
+        h.push('<p><span><img src="images/bobcats.png" width=45 height=45><strong>Charlotte Bobcats</strong></span><br />Brendan Haywood, 1997-2001</p>');
+	
+	t.push('Location Name 2');
+        x.push(40.74971);
+        y.push(-73.99226);
+        h.push('<p><span><img src="images/knicks.png" width=40 height=40><strong>New York Knicks</strong></span><br />Raymond Felton, 2002-2005</p>');
+	
+	t.push('Location Name 2');
+        x.push(40.76825);
+        y.push(-111.90120);
+        h.push('<p><span><img src="images/jazz.png" width=40 height=40>&nbsp;<strong>Utah Jazz</strong></span><br />Marvin Williams, 2004-2005</p>');
+	
+	t.push('Location Name 2');
+        x.push(43.64407);
+        y.push(-79.37843);
+        h.push('<p><span><strong><img src="images/raptors.png" width=40 height=40>&nbsp;Toronto Raptors</strong></span><br />Tyler Hansbrough, 2005-2009</p>');
+	
+	t.push('Location Name 2');
+        x.push(29.43424);
+        y.push(-98.43367);
+        h.push('<p><span><img src="images/spurs.png" width=40 height=40>&nbsp;<strong>San Antonio Spurs</strong></span><br />Danny Green, 2005-2009</p>');
+	
+	t.push('Location Name 2');
+        x.push(39.74855);
+        y.push(-105.00771);
+        h.push('<p><span><img src="images/nuggets.png" width=40 height=40>&nbsp;<strong>Denver Nuggets</strong></span><br />Ty Lawson, 2006-2009</p>');
+	
+	t.push('Location Name 2');
+        x.push(35.13669);
+        y.push(-90.05188);
+        h.push('<p><span><img src="images/grizzlies.png" width=35 height=35>&nbsp;<strong>Memphis Grizzlies</strong></span><br />Ed Davis, 2008-2010</p>');
+	
+	t.push('Location Name 2');
+        x.push(41.49670);
+        y.push(-81.68948);
+        h.push('<p><span><img src="images/cavaliers.png" width=45 height=45>&nbsp;<strong>Cleveland Cavaliers</strong></span><br />Tyler Zeller, 2008-2012</p>');
+	
+	t.push('Location Name 2');
+        x.push(43.04373);
+        y.push(-87.91717);
+        h.push('<p><span><img src="images/bucks.png" width=45 height=45>&nbsp;<strong>Milwaukee Bucks</strong></span><br />John Henson, 2009-2012</p>');
+      
+       var image = {
+	url: 'images/marker.png',
+	size: new google.maps.Size(40, 70),
+	};
+       
+    
+	
+        var i = 0;
+        for ( item in t ) {
+            var m = new google.maps.Marker({
+                map: google_map,
+		icon: image,
+                animation: google.maps.Animation.DROP,
+                title:     t[i],
+                position:  new google.maps.LatLng(x[i],y[i]),
+                html:      h[i]
+            });
+
+            google.maps.event.addListener(m, 'click', function() {
+                info_window.setContent(this.html);
+                info_window.open(google_map, this);
+            });
+            i++;
+        }
+	   }
+	     
+	     google.maps.event.addDomListener(window, 'load', initialize);
+	     
+	     console.log('loading map');
+
+      });
+     
+     
+     
+     //For my instagram API//
+      var Instagram = {};
+      Instagram.Template = {};
+      //var config = Instagram.Config, url;
+   Instagram.Config = {
+	    clientID: '5aff1c64d4154a0ebeffa5b7d9636338',
+	     apiHost: 'https://api.instagram.com'
+   };
+   
+      Instagram.Template.Views = {
+
+	    "photo": "<div class='photo'>" +
+            "<a href='{url}' target='_blank'><img class='main' src='{photo_url}' width='250' height='250' /></a>" +
+            "<img class='avatar_url' width='40' height='40' src='{avatar}' />" +
+            "<span class='heart'><strong>{like_count}</strong></span>" +
+          "</div>"
+       };
+   
+     (function(){
+      
+	   Instagram.Template.generate = function(template, photo){
+	    // Define variable for regular expression.
+	     var re;
+	     // Fetch template.
+	    template = Instagram.Template.Views[template];
+	    // Loop through the passed photo object.
+	    for(var attribute in photo){
+	    // Generate a regular expression.
+	    re = new RegExp("{" + attribute + "}","g");
+	    // Apply the regular expression instance with 'replace'.
+	    template = template.replace(re, photo[attribute]);
+	    }
+	    return template;
+           };
+	    
+	   function toTemplate(photo){
+	       photo = {
+		  like_count: photo.likes.count,
+		  avatar_url: photo.user.profile_picture,
+		  photo_url: photo.images.low_resolution.url,
+		  url: photo.link
+	     };
+
+	   return Instagram.Template.generate('photo', Instagram.Template.Views['photo']);
+	   }
+	    
+      
+	   function toScreen(photos){
+	   $.each(photos.data, function(index, photo){
+	     photo = toTemplate(photo);
+	    $('div#instagram').append(photo);
+	    });//EACH, INDEX photo
+	   }//to screen
+	   
+	   function search(tag){
+	   var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=5aff1c64d4154a0ebeffa5b7d9636338"
+	   $.getJSON(url, toScreen);
+	   }
+	 
+	  Instagram.search = search;
+     })();
+
+          Instagram.search('deandome');
+     
+    </script>
+    
+    
+
+</head>
+
+<body>
+    <div class="container">
+    <div class="row">
+     <div class="col-md-12"><h1>Calling all Tar Heels</h1></div>
+    </div>
+    
+    &nbsp;&nbsp;
+   &nbsp;
+    <div class="row">
+     <div class="col-md-12 deck">Tar Heel fans are passionate about sports. North Carolina has won 43 National Championships; 6 of those being men's basketball, counting the 1924 win.
+     UNC students wait for hours in stand by lines if they don't receive tickets in the lottery for basketball games.
+     Last year students started lining up at 8 a.m. for a 5 p.m. stand by line 2 days before UNC played Duke.
+    See below why fans are excited about the heels. Explore what they are tweeting about and capturing in the Dean Dome. 
+
+     </div>
+    </div>
+    
+    <!--Line divider-->
+   
+    <div class="row">
+     <div class="col-md-2">
+       <div class="numbers">6
+	<div class="between">NCAA Championships</div>
+	</div>
+      </div>
+     <div class="col-md-2">
+       <div class="numbers">18
+	<div class="between">Final
+	<br />Fours</div>
+	</div>
+      </div>
+     <div class="col-md-2">
+       <div class="numbers">9
+	<div class="between">Hall of
+	<br />famers</div>
+	</div>
+      </div>
+     <div class="col-md-2">
+       <div class="numbers">103
+	<div class="between">Drafted for NBA</div>
+	</div>
+      </div>
+     <div class="col-md-2">
+       <div class="numbers">44
+	<div class="between">First-round picks</div>
+	</div>
+      </div>
+     <div class="col-md-2">
+       <div class="numbers">14
+	<div class="between">Lottery picks</div>
+	</div>
+      </div>
+     
+    </div><!--done with line divider-->
+     &nbsp;&nbsp;
+     &nbsp;
+     
+     
+    <div class="row">
+     <div class="col-md-8">
+      <div class="header">Tarheels Currently the NBA</div>
+      
+       <div id="map"></div>
+     </div>
+     <div class="col-md-4">
+     <div id='instagram'>Hey</div>
+       
+     </div>
+    
+    </div>
+
+   </div><!--ends the container-->
+   
+</body>
+</html>
