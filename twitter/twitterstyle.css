@@ -1,20 +1,93 @@
+@font-face {
+  font-family: Bebas;
+  src: url(fonts/BebasNeue.otf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(fonts/RobotoCondensed-Bold.ttf);
+}
+
+a {
+   color: #7F7F7F; 
+}
+
+.userdata a:link {
+    color: #7F7F7F;
+    text-decoration:none;
+}
+
+.userdata a:hover {
+    color: #95B9E2;
+}
+
+.userdata a:visited {
+    color: #163854;
+}
+
+p {
+    font-family: 'Roboto';
+}
+.header {
+   font-family:'RobotoCondensed';
+   font-size:30pt;
+   text-align:center;
+   color: #95B9E2;
+}
+
+.hashtag {
+    font-family: 'RobotoCondensed';
+    font-size:20pt;
+    
+}
+
+/*.circle {
+    background-color:#DCE9F4;
+    width: 100%;
+    height: 100px;
+    border-radius: 100% / 50%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    
+}*/
 
 .userdata {
+    font-family:'Roboto';
     padding:10px;
     background:#DCE9F4;
     color:#7F7F7F;
+    clear:both;   
 }
 
 .picture {
     float:left;
-    
+    clear:both;
+
 }
 
 .name {
+    padding-left:15px;
     float:left;
-    padding:10px;
+    font-size:12pt;
+    font-weight:600;
+    
 }
 
 .date {
     float:right;
+    font-size:10pt;
+}
+
+.thetweet {
+    font-family:'RobotoCondensed';
+    padding-left:65px;
+    color:#7F7F7F;
+    font-size:14pt;
+    display:block;
+    
 }

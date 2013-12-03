@@ -15,6 +15,33 @@
 }
 
 
+a {
+   color: #7F7F7F; 
+}
+
+.anchors a:link {
+    color: #7F7F7F;
+    text-decoration:none;
+}
+
+.anchors a:hover {
+    color: #95B9E2;
+}
+
+.anchors a:visited {
+    color: #163854;
+}
+
+.stats {
+  width:100%;
+  margin: 0 auto;
+}
+
+.player {
+  border-style:solid;
+  border-width:5px;
+}
+
 
 body {
   
@@ -26,6 +53,12 @@ body {
 
 
 
+.teams {
+  font-family: Bebas;
+  font-size:15pt;
+  color:#163854;
+}
+
 p {
    font-family:Roboto;
    font-size:12pt;
@@ -34,22 +67,24 @@ p {
 
 
 h1 h2 h3 h4 h5 h6 {
-   text-align:right;
+   font-family: Bebas;
 }
 
 h1 {
-  font-size:50pt;
+  font-size:60pt;
   color:#95B9E2;
 }
 
 h2 {
+   font-family: Bebas;
    font-size:28pt;
    color:#908670;
 }
 
 h3 {
-   font-size:20pt;
-   color:#C5DAE6;
+  font-family: Bebas;
+   font-size:15pt;
+   color:#93BED7;
    
 }
 
@@ -57,11 +92,18 @@ h3 {
   margin-top:50px;
   font-size:30pt;
   color: #93BED7;
+
 }
 
+.smallbird {
+  margin-top:20px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+  
 .header {
    font-family:'RobotoCondensed';
-   
    font-size:30pt;
    text-align:left;
    color: #163854;
@@ -70,6 +112,22 @@ h3 {
 .header2 {
   font-family:'RobotoCondensed';
    margin-top:-60px;
+}
+
+.header3 {
+   font-family:'RobotoCondensed';
+   font-size:30pt;
+   text-align:center;
+   margin-top:20px;
+   color: #163854;
+   background-color: #DCE9F4; 
+}
+
+.header4 {
+   font-family:'RobotoCondensed';
+   font-size:30pt;
+   text-align:left;
+   color: #DCE9F4; 
 }
 
 .deck {
@@ -88,6 +146,11 @@ h3 {
    color:#163854;  
 }
 
+.numbers2 {
+   font-family:Bebas;
+   font-size:50pt;
+   color:#163854;  
+}
 
 .deaths {
    font-family:Roboto;
@@ -131,6 +194,15 @@ h3 {
    color:#95B9E2;
    font-family: Bebas; 
    font-size:25pt;
+   margin-top:-10px;
+   line-height: 27pt;
+}
+
+.between2 {
+   color:#95B9E2;
+   font-family: Bebas; 
+   font-size:25pt;
+   text-align:center;
    margin-top:-10px;
    line-height: 27pt;
 }
@@ -180,12 +252,13 @@ h3 {
   width: 100%;
   clear: both;
   margin: 20px 0 10px;
+  background-color: #DCE9F4;
   
   }
   
 #scrollbar1 .viewport {
   width: 100%;
-  height: 400px;
+  height: 420px;
   overflow: hidden;
   position: absolute;
   }
@@ -239,6 +312,7 @@ h3 {
 
 #photos-wrap {
   width:80%;
+  text-align:center;
 }
 
 .instaphoto {
@@ -254,6 +328,7 @@ h3 {
   border-color: #DCE9F4;
   border-style:solid;
   border-width:5px;
+  min-height:400px;
   
 }
 
@@ -320,6 +395,7 @@ h3 {
   }
   
 .twitter-timeline {
+  margin-top:25px;
   width:100%;
   height:400px;
 }
@@ -327,4 +403,29 @@ h3 {
 .twitterback {
   background-color: #163854;
 }
+
+.tweets {
+  float:right;
+}
+
+.instagrambackground {
+  background-color: #DCE9F4;
+}
+
+@media (max-width: 768px) {
+  body{
+  background-image:none;
+  background-color: #163854;
+  }
+}
+
+.anchors {
+  font-family:Bebas;
+  font-size:17pt;
+  color:#163854;
+  padding:10px;
+  background-color:#DCE9F4;
+  
+}
+
 

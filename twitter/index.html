@@ -211,8 +211,7 @@
      //For my instagram API//
      
      var Instagram = {};
-     
-    
+
 	(function(){
 	 
 	  
@@ -229,12 +228,11 @@
 	    var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=5aff1c64d4154a0ebeffa5b7d9636338"
 	   $.getJSON(url, toScreen);
 	   }
-	
+
 	    Instagram.search = search;
 	})();
 
         Instagram.search('uncbasketball');
-	
   
     </script>
     
@@ -246,21 +244,7 @@
 <body>
     <div class="container">
     <div class="row">
-     <div class="col-md-9"><h1>Calling all Tar Heels</h1></div>
-     <div class="col-md-3">
-      <div class="btn-group">
-	 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-		<span class="anchors">Jump to</span><span class="caret"></span>
-	 </button>
-	      <ul class="dropdown-menu anchors" role="menu">
-		  <li><a href="#tweets">Tweets</a></li>
-		  <li><a href="#playertweets">Player's Tweets</a></li>
-		  <li><a href="#instagram">Instagram</a></li>
-	     </ul>
-	 </div>
-     </div>
-     
-     <!-- <span><a href="#tweets">Tweets</a>&nbsp;<a href="#playertweets">Player's tweets</a></span></div>-->
+     <div class="col-md-12"><h1>Calling all Tar Heels</h1></div>
     </div>
     
     &nbsp;&nbsp;
@@ -313,57 +297,31 @@
      
     </div><!--row of numbers-->
     
-    <div class="row visible-sm">
+    <div class="row visible-sm visible-xs stats">
      <div class="col-md-4">
        <span class="numbers">6
 	<span class="between2">NCAA Championships</span>
-       <span class="fltr">
+       18
 	<span class="between2">Final Fours</span>
-	18
-	</span></span>
+	</span>
       </div>
      <div class="col-md-4">
        <span class="numbers">9
 	<span class="between2">Hall of famers</span>
-	<span class="fltr">
+       103
 	<span class="between">Drafted for NBA</span>
-	103
-	</span></span>
+	</span>
       </div>
      <div class="col-md-4">
        <span class="numbers">44
 	<span class="between2">First-round picks</span>
-	<span class="fltr">
-	<span class="between2">Lottery picks</span>
 	14
-	</span></span>
+	<span class="between2">Lottery picks</span>
+	</span>
       </div>
      
      
     </div>
-    
-    
-      <div class="row visible-xs">
-	<div class="col-xs-12 stats">
-	    <span class="numbers2">6 <span class="between2">NCAA Championships</span></span></div></div>
-      <div class="row visible-xs">
-	<div class="col-xs-12 stats">
-	    <span class="numbers2">18 <span class="between2">Final Fours</span></span></div></div>
-      <div class="row visible-xs">
-	<div class="col-xs-12 stats">
-	    <span class="numbers2">9 <span class="between2">Hall of Famers</span></span></div></div>
-      <div class="row visible-xs">
-	<div class="col-xs-12 stats">
-	    <span class="numbers2">103 <span class="between2">Drafted for NBA</span></span></div></div>
-      <div class="row visible-xs">
-	<div class="col-xs-12 stats">
-	    <span class="numbers2">44 <span class="between2">First-round picks</span></span></div></div>
-      <div class="row visible-xs">
-	<div class="col-xs-12 stats">
-	    <span class="numbers2">14 <span class="between2">Lottery Picks</span></span></div></div>
-      
-      
-       
      &nbsp;&nbsp;
      &nbsp;
      
@@ -373,23 +331,8 @@
       <div class="header">Tarheels Currently the in NBA</div>
       <div id="map"></div>
      </div>
-       
-     &nbsp;&nbsp;
-     &nbsp;
-     
      <div class="col-md-4">
-      <span class="header"><a name="instagram"><img src="images/instagram.png" width="57.8" height="53.6"></a>&nbsp; #uncbasketball</span>
-      
-      <!--<form id='search'>
-       <button type='submit' id='search-button' tabindex='2'>
-	  <span class='button-content'>Search</span>
-	  </button>
-	 <div class='search-wrap'>
-	  <input class='search-tag' type='text' tabindex='1' />
-	 </div>
-      </form>-->
-      
-      
+      <span class="header"><img src="images/instagram.png" width="57.8" height="53.6">&nbsp; #uncbasketball</span>
       <div id="scrollbar1">
        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
        <div class="viewport">
@@ -401,31 +344,23 @@
       </div><!--scrollbar-->
      </div>
     
-   
-    
     </div><!--endrow-->
-    
-    
-    
-    
     
     <!--TWEETS-->
     <div class="row">
      <div class="twitterbackground">
       <div class="col-md-4">
-	<div class="header2 visible-md visible-lg"><span class="tweettitle"><img class="visible-md visible-lg" src="images/twitter.png" width="325" height="443"></span></div>
+	<div class="header2"><span class="tweettitle"><img class="visible-md visible-lg" src="images/twitter.png" width="325" height="443" ></span></div>
       </div>
       <div class="col-md-8">
-        <img class="smallbird visible-sm visible-xs" src="images/twitter.png" width="75" height="98.6" >
-	&nbsp;
-	<a name="tweets"><iframe frameBorder="0" src="twitter/index.php" width="100%" height="370"></iframe></a></div>
+	<iframe frameBorder="0" src="twitter/index.php" width="100%" height="390"></iframe></div>
       </div>
       </div>
     
     
     <div class="row">
      <div class="col-md-12">
-     <a name="playertweets"> <div class="header3">Follow the Heels Top Gaurds</div></a>
+      <div class="header3">Follow the Heels Top Gaurds</div>
      </div>
      
     </div>
