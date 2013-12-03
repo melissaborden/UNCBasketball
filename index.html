@@ -2,6 +2,9 @@
 
 <html>
 <head>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>UNC Basketball</title>
     
@@ -16,6 +19,8 @@
   
     <!--Bootstrap Javascript-->
     <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.tinyscrollbar.min.js"></script>
+    
     
     <!--Google Maps-->
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -34,7 +39,7 @@
      var styles = [
     {
       stylers: [
-        { hue: "#163854" },
+        { hue: "#DCE9F4" },
         { saturation: -40 }
       ]
     },{
@@ -59,14 +64,37 @@
      
      $(document).ready(function(){
       console.log('ready');
+      
+      function initialize2(){
+        //myscrollbar 
+	    $('#scrollbar1').tinyscrollbar();
+	    console.log('scrollbarworking');
+      };
+      
+      function initialize3(){
+        //myscrollbar 
+	    $('#scrollbar2').tinyscrollbar({ axis: 'x'});
+	    console.log('scrollbarworking');
+      };
+      
+      
+      
+	    
+      //for the google map 
 	   function initialize() {
+	     //myscrollbar 
+	    $('#scrollbar1').tinyscrollbar();
+	    console.log('scrollbarworking');
 	   
 	       var mapOptions = {
 		 center: new google.maps.LatLng(35.9130556, -79.0561111),
+		 minZoom: 4,
+		 maxZoom: 9,
 		 zoom: 4,
 		 mapTypeControlOptions: {
 		 mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
 		 }
+		 
 		 
 	   };
 	     
@@ -89,62 +117,62 @@
         t.push('San Fransico');
         x.push(37.80209);
         y.push(-122.27318);
-        h.push('<p><img src="images/warriors.png" width=30 height=30>&nbsp;<strong>Golden State Warriors</strong><br/>Harrison Barnes, 2010-2012</p>');
+        h.push('<span><img src="images/warriors.png" width=30 height=30>&nbsp;&nbsp;<strong>Golden State Warriors</strong></span><br/><p><img class="player" src="images/HB.png" width=73 height=64.5>&nbsp;Harrison Barnes, 2010-2012</p>');
 
         t.push('Dallas');
         x.push(32.79044);
         y.push(-96.81016);
-        h.push('<p><span><img src="images/mavericks.png" width=40 height=40>&nbsp;<strong>Dallas Mavericks</strong></span><br/>Vince Carter, 1995-1998<br/>Wayne Ellington, 2006-2009<br/>Brandan Wright, 2006-2007</p>');
+        h.push('<p><span><img src="images/mavericks.png" width=40 height=40>&nbsp;&nbsp;<strong>Dallas Mavericks</strong></span><br/><img src="images/VC.png" width=73 height=64.5>&nbsp;Vince Carter, 1995-1998<br/><img src="images/WE.png" width=73 height=64.5>&nbsp;Wayne Ellington, 2006-2009<br/><img src="images/BW2.png" width=73 height=64.5>&nbsp;Brandan Wright, 2006-2007</p>');
 	
 	t.push('Location Name 2');
         x.push(34.04313);
         y.push(-118.26712);
-        h.push('<p><span><img src="images/clippers.png" width=40 height=40>&nbsp;<strong>Los Angeles Clippers</strong></span><br />Antawn Jamison, 1995-1998 <br />Reggie Bullock, 2010-2013</p>');
+        h.push('<p><span><img src="images/clippers.png" width=40 height=40>&nbsp;&nbsp;<strong>Los Angeles Clippers</strong></span><br /><img src="images/AJ.png" width=73 height=64.5>&nbsp;Antawn Jamison, 1995-1998 <br /><img src="images/RB.png" width=73 height=64.5>&nbsp;Reggie Bullock, 2010-2013</p>');
 	
 	t.push('Location Name 2');
         x.push(35.22506);
         y.push(-80.83933);
-        h.push('<p><span><img src="images/bobcats.png" width=45 height=45><strong>Charlotte Bobcats</strong></span><br />Brendan Haywood, 1997-2001</p>');
+        h.push('<p><span><img src="images/bobcats.png" width=45 height=45>&nbsp;&nbsp;<strong>Charlotte Bobcats</strong></span><br /><img src="images/BW.png" width=73 height=64.5>&nbsp;Brendan Haywood, 1997-2001</p>');
 	
 	t.push('Location Name 2');
         x.push(40.74971);
         y.push(-73.99226);
-        h.push('<p><span><img src="images/knicks.png" width=40 height=40><strong>New York Knicks</strong></span><br />Raymond Felton, 2002-2005</p>');
+        h.push('<p><span><img src="images/knicks.png" width=40 height=40>&nbsp;&nbsp;<strong>New York Knicks</strong></span><br /><img src="images/RF.png" width=73 height=64.5>&nbsp;Raymond Felton, 2002-2005</p>');
 	
 	t.push('Location Name 2');
         x.push(40.76825);
         y.push(-111.90120);
-        h.push('<p><span><img src="images/jazz.png" width=40 height=40>&nbsp;<strong>Utah Jazz</strong></span><br />Marvin Williams, 2004-2005</p>');
+        h.push('<p><span><img src="images/jazz.png" width=40 height=40>&nbsp;&nbsp;<strong>Utah Jazz</strong></span><br /><img src="images/MW.png" width=73 height=64.5>&nbsp;Marvin Williams, 2004-2005</p>');
 	
 	t.push('Location Name 2');
         x.push(43.64407);
         y.push(-79.37843);
-        h.push('<p><span><strong><img src="images/raptors.png" width=40 height=40>&nbsp;Toronto Raptors</strong></span><br />Tyler Hansbrough, 2005-2009</p>');
+        h.push('<p><span><strong><img src="images/raptors.png" width=40 height=40>&nbsp;&nbsp;<stong>Toronto Raptors</strong></span><br /><img src="images/TH.png" width=73 height=64.5>&nbsp;Tyler Hansbrough, 2005-2009</p>');
 	
 	t.push('Location Name 2');
         x.push(29.43424);
         y.push(-98.43367);
-        h.push('<p><span><img src="images/spurs.png" width=40 height=40>&nbsp;<strong>San Antonio Spurs</strong></span><br />Danny Green, 2005-2009</p>');
+        h.push('<p><span><img src="images/spurs.png" width=40 height=40>&nbsp;&nbsp;<strong>San Antonio Spurs</strong></span><br /><img src="images/DG.png" width=73 height=64.5>&nbsp;Danny Green, 2005-2009</p>');
 	
 	t.push('Location Name 2');
         x.push(39.74855);
         y.push(-105.00771);
-        h.push('<p><span><img src="images/nuggets.png" width=40 height=40>&nbsp;<strong>Denver Nuggets</strong></span><br />Ty Lawson, 2006-2009</p>');
+        h.push('<p><span><img src="images/nuggets.png" width=40 height=40>&nbsp;&nbsp;<strong>Denver Nuggets</strong></span><br /><img src="images/TL.png" width=73 height=64.5>&nbsp;Ty Lawson, 2006-2009</p>');
 	
 	t.push('Location Name 2');
         x.push(35.13669);
         y.push(-90.05188);
-        h.push('<p><span><img src="images/grizzlies.png" width=35 height=35>&nbsp;<strong>Memphis Grizzlies</strong></span><br />Ed Davis, 2008-2010</p>');
+        h.push('<p><span><img src="images/grizzlies.png" width=35 height=35>&nbsp;&nbsp;<strong>Memphis Grizzlies</strong></span><br /><img src="images/ED.png" width=73 height=64.5>&nbsp;Ed Davis, 2008-2010</p>');
 	
 	t.push('Location Name 2');
         x.push(41.49670);
         y.push(-81.68948);
-        h.push('<p><span><img src="images/cavaliers.png" width=45 height=45>&nbsp;<strong>Cleveland Cavaliers</strong></span><br />Tyler Zeller, 2008-2012</p>');
+        h.push('<p><span><img src="images/cavaliers.png" width=45 height=45>&nbsp;&nbsp;<strong>Cleveland Cavaliers</strong></span><br /><img src="images/TZ.png" width=73 height=64.5>&nbsp;Tyler Zeller, 2008-2012</p>');
 	
 	t.push('Location Name 2');
         x.push(43.04373);
         y.push(-87.91717);
-        h.push('<p><span><img src="images/bucks.png" width=45 height=45>&nbsp;<strong>Milwaukee Bucks</strong></span><br />John Henson, 2009-2012</p>');
+        h.push('<p><span><img src="images/bucks.png" width=45 height=45>&nbsp;&nbsp;<strong>Milwaukee Bucks</strong></span><br /><img src="images/JH.png" width=73 height=64.5>&nbsp;John Henson, 2009-2012</p>');
       
        var image = {
 	url: 'images/marker.png',
@@ -178,74 +206,39 @@
 
       });
      
-     
+   
      
      //For my instagram API//
-      var Instagram = {};
-      Instagram.Template = {};
-      //var config = Instagram.Config, url;
-   Instagram.Config = {
-	    clientID: '5aff1c64d4154a0ebeffa5b7d9636338',
-	     apiHost: 'https://api.instagram.com'
-   };
-   
-      Instagram.Template.Views = {
-
-	    "photo": "<div class='photo'>" +
-            "<a href='{url}' target='_blank'><img class='main' src='{photo_url}' width='250' height='250' /></a>" +
-            "<img class='avatar_url' width='40' height='40' src='{avatar}' />" +
-            "<span class='heart'><strong>{like_count}</strong></span>" +
-          "</div>"
-       };
-   
-     (function(){
-      
-	   Instagram.Template.generate = function(template, photo){
-	    // Define variable for regular expression.
-	     var re;
-	     // Fetch template.
-	    template = Instagram.Template.Views[template];
-	    // Loop through the passed photo object.
-	    for(var attribute in photo){
-	    // Generate a regular expression.
-	    re = new RegExp("{" + attribute + "}","g");
-	    // Apply the regular expression instance with 'replace'.
-	    template = template.replace(re, photo[attribute]);
-	    }
-	    return template;
-           };
-	    
-	   function toTemplate(photo){
-	       photo = {
-		  like_count: photo.likes.count,
-		  avatar_url: photo.user.profile_picture,
-		  photo_url: photo.images.low_resolution.url,
-		  url: photo.link
-	     };
-
-	   return Instagram.Template.generate('photo', Instagram.Template.Views['photo']);
-	   }
-	    
-      
-	   function toScreen(photos){
+     
+     var Instagram = {};
+     
+    
+	(function(){
+	 
+	  
+	  function toScreen(photos){
 	   $.each(photos.data, function(index, photo){
-	     photo = toTemplate(photo);
-	    $('div#instagram').append(photo);
-	    });//EACH, INDEX photo
-	   }//to screen
-	   
+
+	  photo = "<img class='instaphoto' src='"+ photo.images.low_resolution.url + "' /> + <br />";
+	    
+	    $('div#photos-wrap').append(photo);
+	  });
+	  }
+	  
 	   function search(tag){
-	   var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=5aff1c64d4154a0ebeffa5b7d9636338"
+	    var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=5aff1c64d4154a0ebeffa5b7d9636338"
 	   $.getJSON(url, toScreen);
 	   }
-	 
-	  Instagram.search = search;
-     })();
+	
+	    Instagram.search = search;
+	})();
 
-          Instagram.search('deandome');
-     
+        Instagram.search('uncbasketball');
+	
+  
     </script>
     
+   
     
 
 </head>
@@ -269,7 +262,7 @@
     
     <!--Line divider-->
    
-    <div class="row">
+    <div class="row visible-md visible-lg">
      <div class="col-md-2">
        <div class="numbers">6
 	<div class="between">NCAA Championships</div>
@@ -299,28 +292,159 @@
       </div>
      <div class="col-md-2">
        <div class="numbers">14
-	<div class="between">Lottery picks</div>
+	<div class="between">Lottery <br />picks</div>
 	</div>
       </div>
      
-    </div><!--done with line divider-->
+     
+    </div><!--row of numbers-->
+    
+    <div class="row visible-sm">
+     <div class="col-md-4">
+       <span class="numbers">6
+	<span class="between2">NCAA Championships</span>
+       <span class="fltr">
+	<span class="between2">Final Fours</span>
+	18
+	</span></span>
+      </div>
+     <div class="col-md-4">
+       <span class="numbers">9
+	<span class="between2">Hall of famers</span>
+	<span class="fltr">
+	<span class="between">Drafted for NBA</span>
+	103
+	</span></span>
+      </div>
+     <div class="col-md-4">
+       <span class="numbers">44
+	<span class="between2">First-round picks</span>
+	<span class="fltr">
+	<span class="between2">Lottery picks</span>
+	14
+	</span></span>
+      </div>
+     
+     
+    </div>
+    
+    
+      <div class="row visible-xs">
+	<div class="col-xs-12 stats">
+	    <span class="numbers2">6 <span class="between2">NCAA Championships</span></span></div></div>
+      <div class="row visible-xs">
+	<div class="col-xs-12 stats">
+	    <span class="numbers2">18 <span class="between2">Final Fours</span></span></div></div>
+      <div class="row visible-xs">
+	<div class="col-xs-12 stats">
+	    <span class="numbers2">9 <span class="between2">Hall of Famers</span></span></div></div>
+      <div class="row visible-xs">
+	<div class="col-xs-12 stats">
+	    <span class="numbers2">103 <span class="between2">Drafted for NBA</span></span></div></div>
+      <div class="row visible-xs">
+	<div class="col-xs-12 stats">
+	    <span class="numbers2">44 <span class="between2">First-round picks</span></span></div></div>
+      <div class="row visible-xs">
+	<div class="col-xs-12 stats">
+	    <span class="numbers2">14 <span class="between2">Lottery Picks</span></span></div></div>
+      
+      
+       
      &nbsp;&nbsp;
      &nbsp;
      
      
     <div class="row">
      <div class="col-md-8">
-      <div class="header">Tarheels Currently the NBA</div>
-      
-       <div id="map"></div>
+      <div class="header">Tarheels Currently the in NBA</div>
+      <div id="map"></div>
      </div>
-     <div class="col-md-4">
-     <div id='instagram'>Hey</div>
        
+     &nbsp;&nbsp;
+     &nbsp;
+     
+     <div class="col-md-4">
+      <span class="header"><img src="images/instagram.png" width="57.8" height="53.6">&nbsp; #uncbasketball</span>
+      
+      <!--<form id='search'>
+       <button type='submit' id='search-button' tabindex='2'>
+	  <span class='button-content'>Search</span>
+	  </button>
+	 <div class='search-wrap'>
+	  <input class='search-tag' type='text' tabindex='1' />
+	 </div>
+      </form>-->
+      
+      
+      <div id="scrollbar1">
+       <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+       <div class="viewport">
+	<div class="overview">
+	 <div id="photos-wrap"></div>
+        </div><!--viewport-->
+    </div><!--overview-->
+       
+      </div><!--scrollbar-->
      </div>
     
+    </div><!--endrow-->
+    
+    
+    
+    
+    
+    <!--TWEETS-->
+    <div class="row">
+     <div class="twitterbackground">
+      <div class="col-md-4">
+	<div class="header2 visible-md visible-lg"><span class="tweettitle"><img class="visible-md visible-lg" src="images/twitter.png" width="325" height="443"></span></div>
+      </div>
+      <div class="col-md-8">
+       <img class="smallbird visible-sm visible-xs" src="images/twitter.png" width="75" height="98.6" >
+	&nbsp;
+	<iframe frameBorder="0" src="twitter/index.php" width="100%" height="370"></iframe></div>
+      </div>
+      </div>
+    
+    
+    <div class="row">
+     <div class="col-md-12">
+      <div class="header3">Follow the Heels Top Gaurds</div>
+     </div>
+     
     </div>
+    
+    <div class="row">
+     <div class="col-md-4">
+      <div class="numbers">PJ HAIRSTON</div>
+     <a class="twitter-timeline" href="https://twitter.com/Mr_Hairston15" data-widget-id="403896745639161856" data-chrome="transparent">Tweets by @Mr_Hairston15</a>
+     </div>
+     
+     <div class="col-md-4">
+      <div class="numbers">Marcus Page</div>
+      <a class="twitter-timeline" href="https://twitter.com/marcuspaige5" data-widget-id="403898686796599297" data-chrome="transparent">Tweets by @marcuspaige5</a>
+     </div>
+     <div class="col-md-4">
+      <div class="numbers">Nate Britt</div>
+      <a class="twitter-timeline" href="https://twitter.com/NateBritt0" data-widget-id="403899945805041665" data-chrome="transparent">Tweets by @NateBritt0</a>
+     </div>
+     
+    </div>
+    
+    
+    
+    
+    <!--PJ Hairston Feed-->
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+     //Marcus Page Feed//
+     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+     //Nate Britt Feed//
+     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+     </script>
 
+  
+	
+       
    </div><!--ends the container-->
    
 </body>

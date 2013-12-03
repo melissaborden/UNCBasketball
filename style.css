@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: Bebas;
-  src: url(fonts/BEBAS_.ttf);
+  src: url(fonts/BebasNeue.otf);
 }
 
 @font-face {
@@ -38,7 +38,7 @@ h1 h2 h3 h4 h5 h6 {
 }
 
 h1 {
-  font-size:40pt;
+  font-size:50pt;
   color:#95B9E2;
 }
 
@@ -53,12 +53,23 @@ h3 {
    
 }
 
+.tweettitle {
+  margin-top:50px;
+  font-size:30pt;
+  color: #93BED7;
+}
+
 .header {
    font-family:'RobotoCondensed';
-   margin-top: 40px;
+   
    font-size:30pt;
    text-align:left;
    color: #163854;
+}
+
+.header2 {
+  font-family:'RobotoCondensed';
+   margin-top:-60px;
 }
 
 .deck {
@@ -74,19 +85,9 @@ h3 {
    font-family:Bebas;
    font-size:50pt;
    text-align:center;
-   color:#163854;
-   
-   
+   color:#163854;  
 }
 
-/*.numbers2 {
-   font-family:InterstateBlackCondensed;
-   font-size:60pt;
-   text-align:center;
-   color:#C5DAE6;
-   
-   
-}*/
 
 .deaths {
    font-family:Roboto;
@@ -129,8 +130,9 @@ h3 {
 .between {
    color:#95B9E2;
    font-family: Bebas; 
-   font-size:20pt;
-   
+   font-size:25pt;
+   margin-top:-10px;
+   line-height: 27pt;
 }
 
 .fltr {
@@ -174,4 +176,155 @@ h3 {
 
 
 
+#scrollbar1 {
+  width: 100%;
+  clear: both;
+  margin: 20px 0 10px;
+  
+  }
+  
+#scrollbar1 .viewport {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: absolute;
+  }
+  
+#scrollbar1 .overview {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  }
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb {
+  background-color: #003D5D;
+  }
+#scrollbar1 .scrollbar {
+  position: relative;
+  float: right;
+  width: 20px;
+  }
+#scrollbar1 .track {
+  background-color: #D8EEFD;
+  height: 400px;
+  width:13px;
+  position: relative;
+  padding: 0 1px;
+  }
+#scrollbar1 .thumb {
+  height: 5px;
+  width: 13px;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  }
+#scrollbar1 .thumb .end {
+  overflow: hidden;
+  height: 5px;
+  width: 13px;
+  }
+  
+#scrollbar1 .disable{
+  display: none;
+  }
+.noSelect {
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  }
+
+#photos-wrap {
+  width:80%;
+}
+
+.instaphoto {
+  width:100%;
+  padding:10px;
+  background-color: #DCE9F4;
+
+}
+
+.twitterbackground {
+  margin-top:40px;
+  background-color:#031E2D;
+  border-color: #DCE9F4;
+  border-style:solid;
+  border-width:5px;
+  
+}
+
+
+#scrollbar2 {
+  width: 100%;
+  clear: both;
+  margin: 20px 0 10px;
+  
+  }
+  
+#scrollbar2 .viewport2 {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: absolute;
+  }
+  
+#scrollbar2 .overview2 {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  }
+#scrollbar2 .thumb2 .end2,
+#scrollbar2 .thumb2 {
+  background-color: #003D5D;
+  }
+#scrollbar2 .scrollbar2 {
+  position: relative;
+  float: right;
+  width: 20px;
+  }
+#scrollbar2 .track2 {
+  background-color: #D8EEFD;
+  height: 400px;
+  width:13px;
+  position: relative;
+  padding: 0 1px;
+  }
+#scrollbar2 .thumb2 {
+  height: 5px;
+  width: 13px;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  }
+#scrollbar2 .thumb2 .end2 {
+  overflow: hidden;
+  height: 5px;
+  width: 13px;
+  }
+  
+#scrollbar2 .disable{
+  display: none;
+  }
+.noSelect {
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  }
+  
+.twitter-timeline {
+  width:100%;
+  height:400px;
+}
+
+.twitterback {
+  background-color: #163854;
+}
 

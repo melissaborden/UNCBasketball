@@ -1,0 +1,20 @@
+
+.userdata {
+    padding:10px;
+    background:#DCE9F4;
+    color:#7F7F7F;
+}
+
+.picture {
+    float:left;
+    
+}
+
+.name {
+    float:left;
+    padding:10px;
+}
+
+.date {
+    float:right;
+}
