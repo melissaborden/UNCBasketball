@@ -219,7 +219,7 @@
 	  function toScreen(photos){
 	   $.each(photos.data, function(index, photo){
 
-	  photo = "<img class='instaphoto' src='"+ photo.images.low_resolution.url + "' /> + <br />";
+	  photo =  "<a href='"+ photo.link +"' target='_blank'>" + "<img class='instaphoto' src='"+ photo.images.low_resolution.url + "' /> &nbsp; <br />";
 	    
 	    $('div#photos-wrap').append(photo);
 	  });
